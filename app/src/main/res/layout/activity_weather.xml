@@ -4,8 +4,8 @@
     <data>
 
         <variable
-            name="order"
-            type="com.tieorange.leanmvpdatabinding.OrderObject" />
+            name="quote"
+            type="com.robertsimoes.quoteable.QuotePackage" />
     </data>
 
     <FrameLayout
@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{order.userName, default = `andrii`}" />
+            android:text="@{quote.quote, default = `life is too short`}" />
 
     </FrameLayout>
 </layout>
