@@ -2,6 +2,7 @@ package com.tieorange.leanmvpdatabinding.presentation.orders.di;
 
 import android.content.Context;
 
+import com.tieorange.leanmvpdatabinding.domain.usecases.order.AppLoadsAllOrders;
 import com.tieorange.leanmvpdatabinding.presentation.orders.OrdersActivity;
 import com.tieorange.leanmvpdatabinding.presentation.orders.OrdersModel;
 import com.tieorange.leanmvpdatabinding.presentation.orders.OrdersPresenter;
@@ -33,8 +34,8 @@ public class OrdersModule {
 
     @OrdersScope
     @Provides
-    public OrdersModel providesOrdersModel() {
-        return new OrdersModel();
+    public OrdersModel providesOrdersModel(AppLoadsAllOrders appLoadsAllOrders) {
+        return new OrdersModel(appLoadsAllOrders);
     }
 
     @OrdersScope

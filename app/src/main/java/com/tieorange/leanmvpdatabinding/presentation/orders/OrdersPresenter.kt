@@ -11,7 +11,15 @@ open class OrdersPresenter(private val model: OrdersModel,
     lateinit var binding: ActivityOrdersBinding
 
     override fun bind(intentBundle: Bundle, savedInstanceState: Bundle, intentData: Uri?) {
-
+        loadOrder()
     }
+
+    private fun loadOrder() {
+        model.loadAllOrders()
+                .subscribe(
+                        { ordersResult -> binding.ordersResult = ordersResult },
+                        { /*TODO: Error handling*/ })
+    }
+
 
 }

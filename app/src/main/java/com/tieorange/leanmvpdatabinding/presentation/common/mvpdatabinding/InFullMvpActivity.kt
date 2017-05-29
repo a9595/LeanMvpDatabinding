@@ -1,4 +1,4 @@
-package com.tieorange.leanmvpdatabinding.mvp
+package com.tieorange.leanmvpdatabinding.presentation.common.mvpdatabinding
 
 /**
  * Created by andrii.kovalchuk on 27/05/2017.

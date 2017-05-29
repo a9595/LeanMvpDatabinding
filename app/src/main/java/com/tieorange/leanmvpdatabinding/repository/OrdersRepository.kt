@@ -6,7 +6,9 @@ import io.reactivex.Single
 
 class OrdersRepository(carGoService: CarGoService) {
     fun getAllOrders(): Single<List<OrderObject>> {
-        return Single.just(listOf<OrderObject>())
+        val list = mutableListOf<OrderObject>()
+        list.add(OrderObject("Wrobel", 1))
+        return Single.just(list)
     }
 
 }

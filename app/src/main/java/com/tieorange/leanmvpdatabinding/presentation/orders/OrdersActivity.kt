@@ -5,12 +5,11 @@ import android.content.Intent
 import android.databinding.ViewDataBinding
 import android.os.Bundle
 import com.tieorange.leanmvpdatabinding.databinding.ActivityOrdersBinding
-import com.tieorange.leanmvpdatabinding.mvp.InFullMvpActivity
+import com.tieorange.leanmvpdatabinding.presentation.common.mvpdatabinding.InFullMvpActivity
 import com.tieorange.leanmvpdatabinding.presentation.orders.di.OrdersGraph
 import javax.inject.Inject
 
 class OrdersActivity : InFullMvpActivity<OrdersPresenter, OrdersView, ViewDataBinding>() {
-
 
     @Inject lateinit var ordersPresenter: OrdersPresenter
     @Inject lateinit var ordersView: OrdersView
@@ -29,7 +28,9 @@ class OrdersActivity : InFullMvpActivity<OrdersPresenter, OrdersView, ViewDataBi
     }
 
     override fun bindingFinished(binding: ViewDataBinding) {
-        presenter.binding = binding as ActivityOrdersBinding
+        val activityOrdersBinding = binding as ActivityOrdersBinding
+        presenter.binding = activityOrdersBinding
+        presentedView.binding = activityOrdersBinding
     }
 
     companion object {
