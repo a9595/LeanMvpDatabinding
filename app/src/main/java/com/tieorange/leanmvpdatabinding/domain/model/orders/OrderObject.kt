@@ -1,4 +1,4 @@
-package com.tieorange.leanmvpdatabinding
+package com.tieorange.leanmvpdatabinding.domain.model.orders
 
 /**
  * Created by andrii.kovalchuk on 27/05/2017.

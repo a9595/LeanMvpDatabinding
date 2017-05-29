@@ -1,6 +1,6 @@
 package com.tieorange.leanmvpdatabinding.repository
 
-import com.tieorange.leanmvpdatabinding.OrderObject
+import com.tieorange.leanmvpdatabinding.domain.model.orders.OrderObject
 import com.tieorange.leanmvpdatabinding.repository.cargo.CarGoService
 import io.reactivex.Single
 

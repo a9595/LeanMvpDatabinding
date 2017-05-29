@@ -1,7 +1,7 @@
 package com.tieorange.leanmvpdatabinding.domain.usecases.order
 
 import com.infullmobile.neuca.domain.usecases.UseCase
-import com.tieorange.leanmvpdatabinding.OrderObject
+import com.tieorange.leanmvpdatabinding.domain.model.orders.OrderObject
 import com.tieorange.leanmvpdatabinding.domain.model.orders.OrdersResult
 import com.tieorange.leanmvpdatabinding.domain.usecases.UseCaseSchedule
 import com.tieorange.leanmvpdatabinding.repository.OrdersRepository
