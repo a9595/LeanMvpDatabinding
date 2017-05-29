@@ -20,6 +20,7 @@ android {
         jackOptions {
             enabled true
         }
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -41,21 +42,24 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    kapt 'com.android.databinding:compiler:2.3.2'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.robertsimoes:Quoteable:1.0'
     compile 'com.google.dagger:dagger:2.10'
     compile 'com.infullmobile.android:infullmvp-kotlin:1.1.7'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
     compile "javax.annotation:javax.annotation-api:1.2"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    kapt 'com.android.databinding:compiler:2.3.2'
     kapt 'com.google.dagger:dagger-compiler:2.10'
     testCompile 'junit:junit:4.12'
 }
 repositories {
     mavenCentral()
     maven { url 'https://maven.infullmobile.com/public' }
+    maven { url 'https://jitpack.io' }
 }
 kapt {
     generateStubs = true
