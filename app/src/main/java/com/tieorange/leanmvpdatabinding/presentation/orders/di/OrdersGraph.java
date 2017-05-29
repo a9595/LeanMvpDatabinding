@@ -15,7 +15,7 @@ public class OrdersGraph {
     public OrdersGraph(OrdersActivity activity) {
         this.builder = DaggerOrdersGraph_OrdersComponent
                 .builder()
-                .applicationComponent(Components.from(activity.getApplication()))
+                .applicationComponent(Components.Companion.from(activity.getApplication()))
                 .ordersModule(new OrdersModule(activity));
     }
 

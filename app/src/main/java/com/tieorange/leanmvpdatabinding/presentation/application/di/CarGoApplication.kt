@@ -6,7 +6,7 @@ import android.app.Application
  * Created by andrii.kovalchuk on 29/05/2017.
  */
 
-internal class CarGoApplication : Application(), HasComponent<ApplicationComponent> {
+open class CarGoApplication : Application(), HasComponent<ApplicationComponent> {
 
     lateinit internal var applicationComponent: ApplicationComponent
 
