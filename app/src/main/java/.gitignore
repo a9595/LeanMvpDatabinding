@@ -31,8 +31,6 @@ hs_err_pid*
 *.dex
 
 # Java class files
-*.class
-
 # Generated files
 bin/
 gen/
@@ -49,8 +47,6 @@ local.properties
 proguard/
 
 # Log Files
-*.log
-
 # Android Studio Navigation editor temp files
 .navigation/
 

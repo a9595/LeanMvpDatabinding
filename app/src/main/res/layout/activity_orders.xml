@@ -1,0 +1,23 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ordersResult"
+            type="com.tieorange.leanmvpdatabinding.domain.model.orders.OrdersResult" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.tieorange.leanmvpdatabinding.presentation.orders.OrdersActivity">
+
+        <TextView
+            android:id="@+id/orders_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`You have `+ ordersResult.orders.size() + ` orders`, default = `hello you have 1 order`}" />
+
+    </LinearLayout>
+</layout>
